@@ -1,25 +1,106 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
-.MuiContainer-root {
+/* Paper styles */
+.MuiPaper-root {
+  padding: 20px;
   text-align: center;
-  padding: 50px;
+  background-color: #f9f9f9;
 }
 
-.MuiButton-root {
-  margin-top: 20px;
-}
-
+/* Modal styles */
 .MuiModal-root {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.MuiBox-root {
+/* Card styles */
+.MuiCard-root {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* CardMedia styles */
+.MuiCardMedia-root {
+  height: 0;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+/* Button styles */
+.MuiButton-root {
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* Form styles */
+.MuiFormControl-root {
+  width: 100%;
+}
+
+/* Typography styles */
+.MuiTypography-root {
+  margin-bottom: 10px;
+}
+/* Root styles */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #f0f0f0;
+}
+
+/* Paper styles */
+.MuiPaper-root {
   padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+/* Modal styles */
+.MuiModal-root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card styles */
+.MuiCard-root {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.MuiCardMedia-root {
+  height: 0;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+.MuiCardContent-root {
+  padding: 16px;
+}
+
+/* Button styles */
+.MuiButton-root {
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* Form styles */
+.MuiFormControl-root {
+  width: 100%;
+}
+
+/* Typography styles */
+.MuiTypography-root {
+  margin-bottom: 10px;
 }

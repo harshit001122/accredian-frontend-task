@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Button, Container, Typography, Modal, Box, TextField } from '@mui/material';
+import { Button, Container, Typography, Modal, Box, TextField, Grid, Paper, Card, CardMedia, CardContent } from '@mui/material';
 import axios from 'axios';
-
+import RaEImg from './assets/Images/ReE.jpg'
+import BelowSection from './Components/BelowSection/BelowSection';
 const App = () => {
   const [open, setOpen] = useState(false);
   const [formData, setFormData] = useState({
@@ -34,15 +35,56 @@ const App = () => {
   };
 
   return (
-    <Container>
-      <Typography variant="h3" component="h1" gutterBottom>
-        Refer & Earn
-      </Typography>
-      <Button variant="contained" color="primary" onClick={handleOpen}>
-        Refer Now
-      </Button>
+    <Container style={{ minHeight: '100vh', padding: '2rem' }}>
+      <Grid container spacing={4} alignItems="center" justifyContent="center">
+        <Grid item xs={12}>
+          <Paper elevation={3} style={{ padding: '2rem', textAlign: 'center' }}>
+            <Typography variant="h3" gutterBottom>
+              Refer & Earn
+            </Typography>
+            <Button variant="contained" color="primary" onClick={handleOpen}>
+              Refer Now
+            </Button>
+          </Paper>
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <Paper elevation={3} style={{ padding: '2rem' }}>
+            <Typography variant="h5" gutterBottom>
+              How It Works
+            </Typography>
+            <Typography variant="body1" gutterBottom>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacinia enim.
+            </Typography>
+            <Typography variant="body1" gutterBottom>
+              Sed dictum tellus vel eros vestibulum, in pharetra tellus congue.
+            </Typography>
+          </Paper>
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <Card>
+            <CardMedia
+              component="img"
+              height="200"
+              image={RaEImg}
+              alt="Refer & Earn"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                Benefits
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                Earn rewards for every successful referral. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+        {/* BelowSection Component */}
+        <Grid item xs={12}>
+          <BelowSection />
+        </Grid>
+      </Grid>
       <Modal open={open} onClose={handleClose}>
-        <Box p={3} bgcolor="background.paper" style={{ margin: 'auto', width: 400 }}>
+        <Box sx={{ width: 400, bgcolor: 'background.paper', p: 3, margin: 'auto' }}>
           <Typography variant="h6" component="h2" gutterBottom>
             Referral Form
           </Typography>
